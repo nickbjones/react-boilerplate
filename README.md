@@ -1,11 +1,15 @@
 # React boilerplate
 
-## Tools used
-
 - typescript
-- react router
-- styled components
+- react-router
+- styled-components
 - material-ui
+
+[Using styled-components in TypeScript: A tutorial with examples](https://blog.logrocket.com/using-styled-components-in-typescript-a-tutorial-with-examples/)
+[React Router Quick Start](https://v5.reactrouter.com/web/guides/quick-start)
+[MUI Core](https://mui.com/core/)
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
