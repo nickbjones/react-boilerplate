@@ -1,30 +1,38 @@
-import { Link } from "react-router-dom";
-
-import styled from 'styled-components';
-
 import {
   HomeOutlined as HomeIcon,
   InfoOutlined as InfoIcon,
   WbSunnyOutlined as WeatherIcon,
 } from '@material-ui/icons';
 
-const NavList = styled.ul`
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-`;
-
-const NavListItemLink = styled(Link)`
-  padding: 1rem;
-`;
+import {
+  NavList,
+  NavItem,
+  NavLink,
+  NavText,
+} from './Navigation.styles';
 
 export default function Navigation() {
   return (
     <nav>
       <NavList>
-        <li><NavListItemLink to="/"><HomeIcon /> Home</NavListItemLink></li>
-        <li><NavListItemLink to="/about"><InfoIcon /> About</NavListItemLink></li>
-        <li><NavListItemLink to="/weather"><WeatherIcon /> Weather</NavListItemLink></li>
+        <NavItem>
+          <NavLink to="/">
+            <HomeIcon />
+            <NavText>Home</NavText>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/about">
+            <InfoIcon />
+            <NavText>About</NavText>
+          </NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink to="/weather">
+            <WeatherIcon />
+            <NavText>Weather</NavText>
+          </NavLink>
+        </NavItem>
       </NavList>
     </nav>
   );
