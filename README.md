@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# React boilerplate
+
+## Tools used
+
+- typescript
+- react router
+- styled components
+- material-ui
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
