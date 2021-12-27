@@ -10,8 +10,7 @@ export default {
   weightNormal: 400,
   weightBold: 700,
   
-  // font weights
-  rem: '14px',
+  // font sizes
   xs: '0.5rem',
   sm: '0.8rem',
   normal: '1rem',

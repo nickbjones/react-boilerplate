@@ -54,3 +54,11 @@ export const PcHide = styled.div`
     display: none;
   }
 `;
+
+export const media = {
+  smallOnly: `@media (max-width: ${smallMaxPx})`,
+  mediumDown: `@media (max-width: ${mediumMaxPx})`,
+  mediumOnly: `@media (min-width: ${mediumMinPx}) and (max-width: ${mediumMaxPx})`,
+  mediumUp: `@media (min-width: ${mediumMinPx})`,
+  largeOnly: `@media (min-width: ${largeMinPx})`,
+}
