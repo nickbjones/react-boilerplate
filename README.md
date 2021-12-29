@@ -1,7 +1,5 @@
 # React boilerplate
 
-## Tools used
-
 - typescript
 - react-router
 - styled-components
