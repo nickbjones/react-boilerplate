@@ -1,46 +1,61 @@
+import Layout from '../shared/styles/layout';
+
 import {
   HomeOutlined as HomeIcon,
   InfoOutlined as InfoIcon,
-  WbSunnyOutlined as WeatherIcon,
   Pets as DogIcon,
+  AirplanemodeActive as AirplaneIcon,
 } from '@material-ui/icons';
 
 import {
+  NavWrapper,
   NavList,
   NavItem,
   NavLink,
   NavText,
 } from './Navigation.styles';
 
+const navItems = [
+  {
+    route: '/',
+    text: 'Home',
+    icon: <HomeIcon />,
+  },
+  {
+    route: '/about',
+    text: 'About',
+    icon: <InfoIcon />,
+  },
+  {
+    route: '/dog-facts',
+    text: 'Dog Facts',
+    icon: <DogIcon />,
+  },
+  {
+    route: '/models',
+    text: 'Models',
+    icon: <AirplaneIcon />,
+  },
+];
+
+
 export default function Navigation() {
   return (
-    <nav>
-      <NavList>
-        <NavItem>
-          <NavLink to="/">
-            <HomeIcon />
-            <NavText>Home</NavText>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/about">
-            <InfoIcon />
-            <NavText>About</NavText>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/weather">
-            <WeatherIcon />
-            <NavText>Weather</NavText>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink to="/dog-facts">
-            <DogIcon />
-            <NavText>Dog Facts</NavText>
-          </NavLink>
-        </NavItem>
-      </NavList>
-    </nav>
+    <NavWrapper>
+      <Layout>
+        <NavList>
+          {
+            navItems.map((item, index) => (
+              <NavItem key={index}>
+                <NavLink to={item.route}>
+                  {item.icon}
+                  <NavText>{item.text}</NavText>
+                </NavLink>
+              </NavItem>
+            ))
+          }
+        </NavList>
+      </Layout>
+    </NavWrapper>
   );
 }

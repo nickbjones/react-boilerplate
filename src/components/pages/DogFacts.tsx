@@ -23,17 +23,15 @@ export default function DogFacts() {
   }, []);
 
   return (
-    <>
-      <Layout>
-        <h2><DogIcon /> Dog Facts</h2>
-        <ul>
-          {
-            facts.map((fact: string, index: number) => (
-              <li key={index}>{fact}</li>
-            ))
-          }
-        </ul>
-      </Layout>
-    </>
+    <Layout>
+      <h2><DogIcon /> Dog Facts</h2>
+      <ul>
+        {
+          facts.map((fact: string, index: number) => (
+            <li key={index}>{fact}</li>
+          ))
+        }
+      </ul>
+    </Layout>
   );
 }
