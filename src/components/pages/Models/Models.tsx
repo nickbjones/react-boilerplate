@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import config from '../../../config';
 import { Link } from 'react-router-dom';
 import { ModelsType } from './shared/ModelTypes';
 import Layout from '../../shared/styles/layout';
@@ -24,7 +25,7 @@ const AddNewText = styled.span`
 `;
 
 export default function Models() {
-  const endpoint = 'http://localhost:8888/app/api/get-models.php';
+  const endpoint = `${config.endpoints.MAMP_LOCAL}/app/api/get-models.php`;
   const [models, setModels] = useState<ModelsType>([]);
 
   function getModelsData() {

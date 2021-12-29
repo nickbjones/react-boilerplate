@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react';
+import config from '../../config';
 import { Pets as DogIcon } from '@material-ui/icons';
 import Layout from '../shared/styles/layout';
 
 export default function DogFacts() {
   const [facts, setFacts] = useState([]);
 
-  const endpoint = 'https://dog-api.kinduff.com/api/facts';
-
   function getDogFacts() {
-    fetch(endpoint)
+    fetch(config.endpoints.DOGFACTS)
       .then((res) => res.json())
       .then((data) => {
         setFacts(data.facts);

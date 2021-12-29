@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import config from '../../../config';
 import { useParams } from 'react-router-dom';
 import { ModelType } from './shared/ModelTypes';
 import Layout from '../../shared/styles/layout';
@@ -7,7 +8,7 @@ import ModelsBreadcrumb from './shared/ModelsBreadcrumb';
 export default function Model() {
   let params = useParams();
   const modelId = params.id;
-  const endpoint = `http://localhost:8888/app/api/get-model.php?id=${modelId}`;
+  const endpoint = `${config.endpoints.MAMP_LOCAL}/app/api/get-model.php?id=${modelId}`;
   const [model, setModel] = useState<ModelType>();
 
   function getModelData() {
